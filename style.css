@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-content {
+  display: flex;
+}
+
+.tool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 217, 255, 0.589);
+  transition: 0.5s;
+}
+.tool .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tool .item > * {
+  margin: 20px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: rgb(252, 252, 252);
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  justify-content: center;
+}
+.tool .item #increase, .tool .item #decrease, .tool .item #fsize {
+  margin: 2px;
+  font-size: 20px;
+}
+.tool .item #decrease {
+  display: none;
+}
+.tool .item #increase, .tool .item #decrease {
+  border-radius: 0;
+  font-size: 30px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.tool .item #clear {
+  font-size: 30px;
+}
+.tool .item #clear:active {
+  background-color: rgb(71, 189, 150);
+}
+.tool .item #color-paint:active {
+  background-color: rgb(71, 189, 150);
+}
+
+@media (max-width: 450px) {
+  .tool {
+    justify-content: center;
+  }
+  .tool > * {
+    min-width: 30px;
+    max-width: 40px;
+    min-height: 30px;
+    max-height: 40px;
+    font-size: 13px;
+    margin: 10px;
+  }
+  .tool #save {
+    display: none;
+  }
+}
+canvas {
+  border: 1px solid black;
+}/*# sourceMappingURL=style.css.map */
